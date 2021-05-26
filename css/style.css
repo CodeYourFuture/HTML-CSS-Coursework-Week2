@@ -1,9 +1,8 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
+/* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 /**
@@ -16,4 +15,201 @@ body {
  * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
  */
 
+/*mobile first*/
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 20px 0;
+}
 
+nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+/*for media queries*/
+#hamburger {
+  visibility: hidden;
+  position: absolute;
+}
+
+#logo {
+  width: 5%;
+  max-width: 50px;
+  height: 10%;
+  max-height: 50px;
+  padding: 25px 0 0 80px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0 80px 0 0;
+  position: absolute;
+}
+
+nav ul li {
+  padding: 20px;
+  /*  display: none; */
+}
+
+a {
+  text-decoration: none;
+  color: rgb(153, 153, 153);
+  font-size: 1.4em;
+}
+
+a:hover {
+  color: #f15b2a;
+}
+
+/*Current page corresponding link in bold*/
+nav ul li:first-child {
+  font-weight: 550;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+#hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*Testing hero image*/
+
+#hero-img {
+  width: 100%;
+  z-index: -5;
+}
+
+#hero-text {
+  position: absolute;
+  top: 300px;
+}
+
+h1,
+h2,
+#cta {
+  text-align: center;
+  color: white;
+  font-weight: 100;
+}
+
+h1,
+h3 {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+h2 {
+  position: relative;
+  top: -15px;
+}
+
+h3 {
+  margin-top: 100px;
+  text-align: center;
+}
+
+#cta {
+  border: 2px solid #f15b2a;
+  border-radius: 5px;
+  background-color: #f15b2a;
+  font-size: 1em;
+  padding: 12px 30px;
+  position: relative;
+  top: 40px;
+}
+
+#features {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+#feature-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+  gap: 150px;
+}
+
+.feature img {
+  width: 80%;
+  max-width: 100px;
+}
+
+.feature p {
+  font-size: 1.3em;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+footer img {
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 50%;
+  padding: 10px;
+  max-width: 15px;
+  margin: 0 5px;
+}
+
+footer p:last-child {
+  color: #b5b5b5;
+}
+
+@media screen and (max-width: 420px) {
+  #logo {
+    padding: 25px 0 0 30px;
+  }
+
+  #hamburger {
+    visibility: visible;
+    padding: 35px 30px;
+  }
+
+  nav ul {
+    visibility: hidden;
+  }
+
+  #hero-img {
+    height: 400px;
+    object-fit: cover;
+    object-position: 65% 0;
+  }
+
+  #hero-text {
+    top: 20vh;
+    transform: scale(0.6);
+  }
+
+  h3 {
+    transform: scale(0.4);
+  }
+
+  #feature-container {
+    gap: 40px;
+    transform: scale(0.7);
+    margin: -140px 0 0 0;
+  }
+
+  footer {
+    margin: -120px 0 0 0;
+  }
+}
