@@ -1,0 +1,191 @@
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+There is an @media request at the bottom of this stylesheet. It only uses CSS and HTML. The nav, .nav-a-container elements 
+are all targeted using the @media request and so have very different styling to the elements below. This method used a checkbox
+which can be toggled on and off to create the illusion of a hamburger icon logo whuich opens up a menu ... very clever solution:
+https://www.youtube.com/watch?time_continue=5&v=xMTs8tAapnQ&feature=emb_title&ab_channel=CalerEdwards
+ */
+
+nav {
+  height: 8%;
+  display: grid;
+  grid-template-columns: 30% 80%;
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+  font-size: 1.4vw;
+}
+
+.nav-img {
+  max-height: 80%;
+  max-width: 80%;
+  grid-row-start: 0;
+  grid-row-end: 1;
+  overflow: hidden;
+  margin-left: 20%;
+  z-index: 0;
+  margin-top: 1%;
+}
+
+.nav-a-container {
+  display: flex;
+  justify-content: space-around;
+  align-self: center;
+}
+
+/*
+.nav-a-first { 
+    font-weight: bolder;
+    color: #707275;
+
+} */
+
+.nav-a:hover {
+  color: orangered;
+  cursor: pointer;
+}
+
+.header-div {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: white;
+  font-size: 1.5vw;
+
+  padding-top: 70px;
+}
+
+.inner-header-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.inner-header-div button {
+  background-color: orangered;
+  padding: 15px;
+  border-radius: 1rem;
+  border-color: orangered;
+}
+
+/* need to find a way to display this image properly when the screen is phone sized. I need the image centered and then any overflow
+hidden. Currently I) am controlling it through max height and I can't get justify content to work ... */
+
+.header-image {
+  background-image: url("https://raw.githubusercontent.com/erin-switchstitch/HTML-CSS-Coursework-Week2/99d5c3fe44175a5563c36cd7806add33f0c3c670/img/first-background.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 700px;
+}
+
+main,
+h2 {
+  color: #8b8d91;
+  text-align: center;
+  padding-top: 50px;
+  font-size: 1.5em;
+}
+
+figcaption {
+  font-size: 1em;
+}
+
+/* I was having difficulties trying to get all three elements displaying on the same line. I should have been using inline-flex and then 
+set the outer container to 100%. All 3 elememets were still not playing together properly with the overall width. This is because 
+in my other CSS file there was a padding set. Found this out by inspecting the eleemtns in firefox, and then seeing what descriptors 
+are applying to my element and which css sheet it is from */
+
+.main-img-container {
+  display: inline-flex;
+  width: 100%;
+}
+
+.main-img {
+  width: 20%;
+  max-width: 350px;
+  padding: 3%;
+}
+
+.extended-box {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+
+  /*grid-template-columns: 40% 60%;*/
+  height: 100%;
+  width: 90%;
+  background-color: #fcefeb;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-bottom: 5%;
+}
+
+.extended-box-img {
+  grid-column-start: 0;
+  grid-column-start: 1;
+  max-width: 100%;
+  align-self: center;
+}
+
+/* managed to get these two seperate pieces of text to occupy the same row (i didn't set any rows in container - it did it automatically)
+by putting them inside a div together */
+
+.text-div {
+  align-self: center;
+  justify-self: center;
+}
+
+.extended-box-p {
+  grid-column-start: 1;
+  grid-column-start: 2;
+  font-size: 1.3em;
+  max-height: 100%;
+}
+
+.extended-box-a {
+  grid-column-start: 1;
+  grid-column-start: 2;
+  max-height: 100%;
+
+  background-color: orangered;
+  padding: 15px;
+  border-radius: 1rem;
+  border-color: orangered;
+  color: white;
+}
+
+footer {
+  align-content: center;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  max-height: 80px;
+  width: 100%;
+
+  padding-bottom: 10%;
+}
+
+.fab {
+  font-size: 40px;
+  margin: 10px;
+  height: 40px;
+  padding: 2%;
+  border: grey 1px solid;
+  border-radius: 10%;
+}
