@@ -1,19 +1,280 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
+/* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
 }
 
 /**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
- */
+    * Add your custom styles below
+    * 
+    * Remember: 
+    * - Be organised, use comments and separate your styles into meaningful chunks
+    *    for example: General styles, Navigation styles, Hero styles, Footer etc.
+    * 
+    * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
+    */
 
+/*--HEADER--*/
 
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  padding: 10px 0 15px 10px;
+}
+
+.hamburger {
+  height: 20px;
+  width: 40px;
+  padding-top: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger-img:hover {
+  transform: scale(1.5);
+}
+
+nav {
+  display: none;
+}
+
+/*--HERO SECTION--*/
+
+.hero {
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/first-background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.hero-title {
+  width: 150px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: rgb(223, 219, 219);
+  text-align: center;
+  padding-top: 40px;
+}
+
+.hero-content {
+  width: 180px;
+  font-size: 14px;
+  font-weight: normal;
+  color: rgb(223, 219, 219);
+  justify-content: center;
+  text-align: center;
+}
+
+.button-hero {
+  margin: 20px;
+}
+
+.hero-btn {
+  background-color: rgb(233, 91, 8);
+  color: rgb(223, 219, 219);
+  border-radius: 5px;
+  padding: 10px 20px 10px 20px;
+  border: none;
+}
+
+/* --Icon section-- */
+
+.icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  color: rgb(87, 85, 85);
+}
+
+.icon-title {
+  width: 180px;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.icon {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-para {
+  padding: 10px;
+  font-weight: normal;
+}
+
+.article-content {
+  margin-top: 15px;
+}
+
+/* --JOIN SECTION */
+
+.join-karma {
+  display: none;
+}
+
+/* --Footer-- */
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  text-align: center;
+  color: rgb(87, 85, 85);
+}
+
+.footer-title {
+  font-weight: lighter;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.med-icon {
+  width: 15px;
+  height: 15px;
+  margin: 10px;
+  padding: 10px;
+  border: rgb(235, 233, 233) 2px solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.trademark {
+  color: rgb(184, 184, 184);
+}
+
+@media screen and (min-width: 768px) {
+  /* --HEADER-- */
+
+  .hamburger {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    width: 60%;
+    margin-right: 80px;
+  }
+
+  .nav-btns {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+  }
+
+  .nav-link {
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(146, 143, 143);
+  }
+
+  .nav-link:hover {
+    color: rgb(233, 91, 8);
+  }
+
+  .active {
+    color: rgb(94, 94, 94);
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .active:hover {
+    color: rgb(233, 91, 8);
+  }
+
+  /* --HERO SECTION-- */
+
+  .hero-title {
+    width: 100%;
+    font-size: 22px;
+    margin-top: 40px;
+  }
+
+  .hero-content {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+  /* --ICON SECTION-- */
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icon-title {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: lighter;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .join-karma {
+    display: inline-block;
+  }
+
+  .join-section-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    text-align: center;
+    background-color: rgba(247, 232, 236, 0.945);
+  }
+
+  .join-now-link {
+    align-items: top;
+    padding: 40px 120px 20px 120px;
+
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  .join-btn {
+    background-color: rgb(233, 91, 8);
+    color: rgb(241, 239, 239);
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+  }
+}
