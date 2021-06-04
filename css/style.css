@@ -4,7 +4,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
-}
+    }
 
 /**
  * Add your custom styles below
@@ -15,5 +15,259 @@ body {
  * 
  * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
  */
+ .continer{
+     margin: 0 auto;
+     padding: 0 10px;
+ }
+
+  
+ #logo{
+     width: 50px;
+     height: 50px;
+     margin-left: 100px;
+     margin-top: 20px;
+     position: absolute;
+     display: flex;
+ }
+
+ 
+ .menu{
+     list-style: none;
+     padding: 20px;
+     display: flex;
+     
+ }
+ .hamburgericon{
+     display: none;
+     width: 30px;
+     height: 20px;
+     float: right;
+     margin: 5px 10px 10px 0px;
+ }
+
+ nav ul{
+     float: right;
+     width: 40%;
+     display: flex;
+     justify-content: space-between;
+     margin-right: 100px;
+ }
+ header nav ul li{
+    float: right;
+    margin-left: 1em;
+    
+}
+ .nav-link{
+    font-family: 'Roboto' , sans-serif;
+    text-decoration: none;
+    color: grey;
+    font-weight:lighter;
+ }
+ .nav-link:hover{
+     color:red;
+ }
+
+#background{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    
+    
 
 
+}
+
+#continer{
+    margin:0%;
+    text-align: center;
+    color: white;
+    position: relative;
+    display: block;
+    
+}
+
+#title{
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 25%;
+    letter-spacing: 2px;
+    font-size: 3em;
+    font-weight: 200;
+    margin-bottom: 5%;
+    
+}
+#subtitle{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 35%;
+    font-size: 1.8em;
+    font-weight: 100;
+    margin-top: 5%;
+
+}
+.btn{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 60%;
+    color: white;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    font-family:  'Times New Roman', Times, serif ,sans-serif;
+    background: orangered;
+    border-radius: 10px;
+    border: 3px ;
+    
+    
+}
+#slogan{
+    text-align: center;
+    font-size: 2.5em;
+    font-weight:lighter;
+    margin-top: 100px;
+}
+
+#benefits{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: center;
+}
+#icons{
+    width: 20%;
+}
+
+.iconstitle{
+    font-weight: lighter;
+
+}
+
+#extended{
+    display: grid;
+    margin-top: 10px;
+    background-color: rgb(235, 186, 186);
+    grid-template-columns: 1fr 1fr;
+    
+
+
+}
+.imageextended{
+    text-align: center;
+}
+.textextended{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;  
+    display: grid;
+    grid-template-rows: 1fr 1fr;  
+    font-size: 35px;
+    width: 70%;
+    font-family: system-ui;
+}
+.btnextended{
+    left: 0;
+    right: 0;
+    color: white;
+    margin: auto;
+    padding: 10px;
+    font-size: 50%;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif ,sans-serif;
+    background: orange;
+    border-radius: 10px;
+    border: 3px;
+    height: 50px;
+    margin-bottom: 100px;
+
+}
+hr{
+    display: block;
+    margin-top: 50px;
+    width: 90%;
+}
+footer{
+    text-align: center;
+}
+#footer{
+    font-weight:500;
+    font-size: inherit;
+}
+.footericon{
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 10px;
+    border: thin solid grey;
+    border-radius: 50%;
+    
+    
+}
+
+span{
+    color: grey;
+    font-weight: 100;
+    margin-top: 50px;
+}
+
+@media  screen and (max-width: 400px) {
+    #logo{
+        width: 20px;
+        height: 20px;
+        position: relative;
+        margin-top:5px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        float: left;
+
+    }
+    .menu{
+        display: none;
+
+    }
+    .hamburgericon{
+        display: flex;
+    }
+    #background{
+        max-height: fit-content;
+    }
+    #title{
+        letter-spacing: 2px;
+        font-size: 1.5em;
+        margin-bottom: 10%;
+    }
+    #subtitle{
+        font-size: 1em;
+        margin-top: 10%;
+    }
+    .btn{
+        font-size: 1em;
+        padding: 10px;
+        margin-top: 20px;
+    
+        
+    }
+    #benefits{
+    display: grid;
+    grid-template-columns: none;
+    text-align: center;
+    }
+    #extended{
+        display: none;
+    }
+    .footericon{
+    width: 5%;
+    height: 5%;
+
+    }
+}
+@media screen and (max-width:800px){
+    #extended{
+    display: none;
+    
+    
+
+
+}
