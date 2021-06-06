@@ -1,19 +1,145 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
+/* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-size: contain;
+}
+.background {
+  background-image: url("../img/first-background.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 60vh;
+  position: top;
+}
+.navbar {
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-align: right;
+}
+.nav-item {
+  padding: 0px;
+  margin: 10px;
+  color: gray;
+  display: inline-block;
+}
+.nav-item:hover {
+  color: orange;
+}
+#nav-link1 {
+  color: black;
+}
+.logo {
+  margin: 5px;
+  padding: 0px;
+  width: 30px;
+  float: left;
+}
+nav select {
+  display: none;
+}
+h1 {
+  margin: 0px;
+  color: white;
+  text-align: center;
+  font-weight: normal;
+}
+p {
+  color: white;
+  text-align: center;
+}
+div {
+  color: white;
+  text-align: center;
+  border: 0px;
+}
+button {
+  background-color: rgb(240, 128, 0);
+}
+.p {
+  text-align: center;
+  color: black;
+}
+
+.all-icon {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+}
+img{
+  max-width: 100px;
+  height:auto;
+
+}
+.p1 {
+  text-align: center;
+  color: black;
+}
+.nav-img {
+  display: none;
+}
+h6{
+  text-align: center;
+  font-weight: normal;
+}
+.social{
+  display:flex;
+  margin: 50px;
+  padding: 0px;
+  margin:auto;
+  justify-content: center;
+  
+}
+
+footer img{
+  margin: 10px;
+  height: auto;
+  max-width: 30px;
+  
+}
+h5{
+  color: gray;
+  text-align: center;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 675px) {
+  nav ul {
+    display: none;
+  }
+  .nav-img {
+    float: right;
+    width: 100px;
+    height: 100px;
+    display: block;
+  }
+  .background {
+    height: fit-content;
+  }
+  .all-icon {
+    display: block;
+    position: top;
+  }
+  .logo {
+    width: 15px;
+    position: top;
+    margin: 5px;
+  }
+  .background {
+    position: relative;
+    top: 40px;
+  }
+
 }
 
 /**
  * Add your custom styles below
  * 
  * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
+ * - Be organized, use comments and separate your styles into meaningful chunks
  *    for example: General styles, Navigation styles, Hero styles, Footer etc.
  * 
- * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
+ * - When using flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
  */
-
-
