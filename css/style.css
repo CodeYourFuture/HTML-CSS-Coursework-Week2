@@ -1,9 +1,7 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
-
-body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+-body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  
 }
 
 /**
@@ -15,5 +13,259 @@ body {
  * 
  * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
  */
+/* Navigation bar */
+img {
+  width: 100px;
+  height: 50px;
+}
+.navigation_bar {
+  display: flex;
+  justify-content: space-between;
+  flex-shrink: inherit;
+}
+
+.corner > ul {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+ul > li {
+  padding: 10px;
+}
+
+li > a {
+  color: rgb(84, 94, 94);
+  text-decoration: none;
+  font-weight: normal;
+}
+li > a:hover {
+  color: rgb(238, 52, 39);
+  text-decoration: none;
+  font-weight: normal;
+}
+
+li:first-child a {
+  color: rgb(32, 27, 27);
+}
+.navigation_bar > div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.corner > img {
+  visibility: hidden;
+  width: 30px;
+  height: 30px;
+}
+/* Main Styles */
+
+/* Hero Styles */
+
+.hero{
+  background-image: url(../img/first-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: 100%;
+  background-position-y: 100%;
+  min-width:100%; min-height:100%; width:100%; height:50rem;
+  display: flex;
+  position:relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro,
+.hero > h1,
+.intro > h2 {
+  font-weight:lighter;
+  font-size: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.extended{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: rgba(241, 220, 223, 0.438);
+  justify-content:flex-start;
+  
+  color: rgb(7, 7, 7);
+
+}
+.ex-version, .ex-version>h2{
+  width:60%;
+  font-size:2.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;}
+
+.feature{ display:flex; width:40%; height:439px;}
+header,
+main,
+footer,
+.intro > h2 {
+  text-align: center;
+  font-weight:lighter;
+}
+
+.hero > h1 { padding-top:90px;}
+.intro > h2 {
+  margin-top:-20px;
+  font-size:2rem;
+  font-weight: normal;
+    }
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom:5rem;
+}
+
+.bottom > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 
 
+h1,h2{
+font-size: 1rem;
+  font-weight: normal;}
+.copyright{color:grey; }
+.button {
+  background-color: rgb(231, 84, 25);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  padding:20px 40px 20px 40px;
+  margin-top:40px;
+  font-size:1.3rem;
+
+}
+
+.ex-version > .button{
+
+  background-color: rgb(231, 84, 25);
+  color: white;
+  border:none;
+  border-radius: 5px;
+  font-size:1.3rem;
+ }
+
+/* general */
+.bottom > h2 {
+
+  text-align: center;
+  font-weight:lighter;
+    font-size: 2.5rem;
+  padding-top: 60px;
+
+}
+article {
+  align-items: center;
+}
+/* Footer */
+.footer {
+  margin-top:5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer > div {
+  width: 50%;
+  margin-top:2rem;
+  margin-bottom:1rem;
+  align-items: center;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+.img-small { 
+  width:35px;
+  height:35px;
+  border-radius: 50%;
+  margin-right:10px;
+  margin-left:10px;
+  
+  border:1px solid grey;}
+/* general */
+ 
+.boost > img {
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+
+ 
+
+
+li {
+  padding: 1rem 0;
+}
+
+
+
+
+/* Mobile screen */
+@media screen and (max-width: 450px) {
+  .corner > img {
+    visibility: visible;
+    width: 30px;
+    height: 30px;
+    padding-right:10px;
+    padding-top:10px;
+  }
+.navigation_bar {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: inherit;
+}
+
+   .corner > ul {
+    display: none;
+  } 
+  .bottom > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom > h2 {
+  text-align: center;
+  font-size: 2rem;
+} 
+
+
+h1,h2{
+font-size: 1rem;
+  font-weight: normal;}
+  .boost > img {
+  align-items: center;
+  width:75px;
+  height: 75px;
+}
+
+.hero{min-width:100%; min-height:100%; width:100%; height:100%; position:relative}
+.footer  { margin-top:1rem;}
+
+  .list {display:none; flex-direction:column;} 
+  .extended{display:none;}
+
+  .list.active{display:flex;flex-direction:column;}
+}
