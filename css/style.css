@@ -15,5 +15,302 @@ body {
  * 
  * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
  */
+html {
+	font-weight: 200;
+}
 
+
+.container {
+	max-width: 800px;
+	margin: 0px auto;
+	padding: 0 15px;
+	text-align: center;
+}
+
+button {
+	background-color: #F15A29;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 15px;
+	margin-top: 10px;
+	transition: .5s all;
+}
+
+button:hover {
+	background-color: #b43106;
+}
+
+header	{
+	background: url(../img/first-background.jpg) 70% 50%/cover no-repeat;
+	color: #fff;
+}
+
+
+
+header .container {
+	padding: 20vw 15px;
+}
+
+
+.nav-menu ul {
+	display: flex;
+	flex-direction: row;
+	margin-left: 0; 
+	padding-left: 0;
+}
+
+.nav-menu__item {
+	list-style-type: none;
+	margin: 0px 10px;
+}
+
+.nav-menu__item-link {
+	color:rgb(73, 73, 73);
+	text-decoration: none;
+}
+
+.nav-menu__item:first-child {
+	font-weight: 500;
+}
+
+.nav-menu__item-link:hover {
+	color:#F15A29;
+}
+
+.nav {
+	color: black;
+	text-align: right;
+	line-height: 50px;
+}
+
+.nav-menu ul {
+	margin: 0;
+}
+
+.nav a {
+	line-height: 50px;
+}
+
+.nav label {
+	font-size: 26px;
+	line-height: 50px;
+	display: none;
+}
+
+#toggle {
+	display: none;
+}
+
+.header-wrap {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px 15vw;
+}
+
+.navbar {
+	height: 50px;
+	background-color: #fff;
+}
+
+.navbar-body {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 100%;
+	padding: 0 15px;
+	max-width: 800px;
+	margin: 0px auto;
+}
+
+#logo {
+	width: 20px;
+	margin-top: 10px;
+}
+
+.burger-menu__icon {
+	width: 20px;
+	height: 2px;
+	background-color: black;
+	margin: 5px 0;
+}
+
+
+
+h1 {
+	font-weight: 200;
+	margin-bottom: 0px;
+}
+
+h2 {
+	font-weight: 200;
+}
+
+.features {
+	padding: 30px 0;
+}
+
+.features__wrap {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+
+.features__element {
+	width: 200px;
+	margin: 20px;
+}
+
+.features__img {
+	width: 50px;
+}
+
+.photo-quote {
+	margin-bottom: 50px;
+}
+
+.photo-quote__wrap {
+	display: flex;
+	flex-direction: space-between;
+}
+
+.photo-quote__img {
+	background: url(../additional/feature-img.png) 0 0/cover no-repeat;
+	height: 400px;
+	width: 45%;
+}
+
+.photo-quote__content {
+	background-color: #FCEFEB;
+	width: 55%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.photo-quote__quote {
+	text-align: center;
+	font-size: 24px;
+	max-width: 300px;
+	font-style: italic;
+	font-weight: normal;
+	color:rgb(73, 73, 73)
+}
+
+.photo-quote button {
+	color: white;
+}
+
+hr {
+	width: 90%;
+	border: 0;
+	height: 1px;
+	background-color: rgb(234, 234, 234);
+}
+
+footer p {
+	font-size: 12px;
+}
+
+.rights {
+	font-size: 10px;
+	color:rgb(102, 101, 101)
+}
+
+.social-wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.social-wrap a {
+	border: 1px solid rgb(234, 234, 234);
+	border-radius: 50%;
+	margin: 0 5px;
+	padding: 10px;
+	width: 15px;
+	height: 15px;
+}
+
+.social-img {
+	width: 15px;
+	height: 15px;
+}
+
+@media screen and (min-width: 769px) {
+	header .container {
+		padding: 15vw 15px;
+	}
+
+	header p {
+		margin-bottom: 30px;
+	}
+
+	.header-wrap {
+		padding: 0px;
+	}
+
+	/* .burger-menu {
+		display: none;
+	} */
+
+
+}
+
+@media screen and (max-width: 769px) {
+	.photo-quote {
+		display: none;
+	}
+
+	.nav label {
+		display: inline-block;
+		cursor: pointer;
+		margin-right: 15px;
+	}
+
+	.nav-menu {
+		text-align: center;
+		width: 100%;
+		margin-top: -5px;
+	}
+
+	.nav-menu ul {
+		flex-direction: column;
+		display: flex;
+		background-color: #fff;
+		width: 100%;
+		position: absolute;
+		transform: translate(0, -420px);
+		transition: transform 0.3s ease;
+	}
+
+	.nav-menu li {
+		margin: 5px 0;
+	}
+
+	.nav {
+		position: absolute;
+		right: 0px;
+		width: 100%;
+	}
+
+	#toggle-close {
+		display: none;
+	}
+	
+	#toggle:checked ~ .nav-menu ul {
+		/* display: flex; */
+		transform: translate(0, 0px);
+	}
+
+	#toggle:checked ~ #toggle-close {
+		display: inline-block;
+	}
+
+	#toggle:checked ~ #toggle-open {
+		display: none;
+	}
+
+}
 

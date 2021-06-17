@@ -1,19 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Karma</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="image/x-icon"  href="favicon.ico">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Karma</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,500,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
+
 <body>
+	<header>
+		<div class="navbar">
+			<div class="navbar-body">
+				<img src="img/karma-logo.svg" alt="logo" id="logo">
+				<div class="nav">
 
-    <!-- Add your HTML markup here -->
-    <!-- Remember: Use semantic HTML tags like <header>, <main>, <nav>, <footer>, <section> etc -->
-    <!-- All the images you need are in the 'img' folder -->
+					<input type="checkbox" id="toggle" />
+					<label for="toggle" id="toggle-open">&#9776</label>
+					<label for="toggle" id="toggle-close">&#10006</label>
+					<nav class="nav-menu">
+						<ul>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Meet Karma</a></li>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">How it Works</a></li>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Store</a></li>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Blog</a></li>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Help</a></li>
+							<li class="nav-menu__item"><a href="#" class="nav-menu__item-link">Login</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header-wrap">
+				<h1>Introducing Karma</h1>
+				<p>Bring WiFi with you, everywhere you go.</p>
+				<button>Learn More</button>
+			</div>
+		</div>
+	</header>
+	<main>
+		<section class="features">
+			<div class="container">
+				<h2>Everyone needs a little Karma.</h2>
+				<div class="features__wrap">
+					<article class="features__element">
+						<img src="img/icon-devices.svg" alt="devices" class="features__img">
+						<p class="features__description">Internet for all devices</p>
+					</article>
+					<article class="features__element">
+						<img src="img/icon-coffee.svg" alt="a cup of coffee" class="features__img">
+						<p class="features__description">Boost your productivity</p>
+					</article>
+					<article class="features__element">
+						<img src="img/icon-refill.svg" alt="petrol station icon" class="features__img">
+						<p class="features__description">Pay as You Go</p>
+					</article>
+				</div>
+			</div>
+		</section>
+		<section class="photo-quote">
+			<div class="photo-quote__wrap">
+				<div class="photo-quote__img">
+				</div>
+				<div class="photo-quote__content">
+					<p class="photo-quote__quote">Wherever I am, I just don't worry about my connection anymore!</p>
+					<button>Get Karma Today</button>
+				</div>
+			</div>
+		</section>
+		<hr>
 
+	</main>
+	<footer>
+		<div class="container">
+			<p>Join us on</p>
+			<div class="social-wrap">
+				<a href="https://twitter.com" target="_blank">
+					<img src="img/twitter-icon.svg" alt="twitter icon" class="social-img">
+				</a>
+				<a href="https://facebook.com" target="_blank">
+					<img src="img/facebook-icon.svg" alt="facebook icon" class="social-img">
+				</a>
+				<a href="https://instagram.com" target="_blank">
+					<img src="img/instagram-icon.svg" alt="instagram icon" class="social-img">
+				</a>
+			</div>
+			<p class="rights">
+				© Karma Mobility, Inc.
+			</p>
+		</div>
+	</footer>
 </body>
+
 </html>
