@@ -1,19 +1,350 @@
-
- /* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
+/* We are using the 'Roboto' font from Google. This has already been added to your HTML header */
 
 body {
-    font-family: 'Roboto', sans-serif;
-    -webkit-font-smoothing: antialiased;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  height: 55px;
+  background-color: white;
+  display: block;
+  width: 100%;
+}
+#navcontain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+nav ul {
+  display: none;
+}
+nav li {
+  display: none;
+}
+#karmalogo {
+  width: 40px;
+  height: 40px;
+}
+#menuhamburgericon {
+  width: 30px;
+  height: 30px;
+}
+#startsection {
+  background-image: url(../img/first-background.jpg);
+  height: 455px;
+  width: 100%;
+  background-position: -390px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /*this spaces things vertically*/
+}
+#startsection div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#startsection h2,
+p,
+button {
+  display: flex;
+  text-align: center;
+  align-self: center;
+  color: white;
+  justify-content: center;
+}
+#startsection h2 {
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  width: 30%;
+}
+#startsection p {
+  text-align: center;
+  font-size: 1.4em;
+  font-weight: 100;
+  opacity: 80%;
+  letter-spacing: 0.1px;
+  width: 60%;
+  color: white;
 }
 
-/**
- * Add your custom styles below
- * 
- * Remember: 
- * - Be organised, use comments and separate your styles into meaningful chunks
- *    for example: General styles, Navigation styles, Hero styles, Footer etc.
- * 
- * - When using Flexbox, remember the items you want to move around need to be inside a parent container set to 'display: flex'
- */
+#learnmorebutton {
+  display: block;
 
+  background: rgb(255, 123, 0);
+  border: 1px rgb(255, 123, 0) solid;
+  border-radius: 5px;
+  color: white;
+  height: 45px;
+  text-align: center;
+  width: 130px;
+}
+/*  second section */
+#secondsectiondesk {
+  display: none;
+}
+#secondsection {
+  background-color: whitesmoke;
+  height: 740px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /*this spaces things vertically*/
+  gap: 20px;
+}
+#secondsection div {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+#secondsection h2,
+#secondsection p,
+#secondsection img {
+  display: flex;
+  text-align: center;
+  align-self: center;
+  color: rgb(0, 0, 0);
 
+  justify-content: center;
+}
+#devicesicon,
+#coffeeicon,
+#refuelicon {
+  width: 80px;
+  margin: auto;
+}
+#secondsection h2 {
+  font-weight: 200;
+  font-size: 27px;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+#secondsection p {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+}
+/* footer starts heeeeeeeree*/
+footer {
+  height: 190px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+}
+footer p {
+  align-items: center;
+  align-self: center;
+  font-size: 14px;
+  color: black;
+}
+footer div {
+  display: flex;
+}
+#socialicons {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  width: 35%;
+}
+#twittericon,
+#facebookicon,
+#instagramicon {
+  width: 15px;
+  display: flex;
+}
+#instagramicon {
+  filter: hue-rotate(180deg);
+  width: 13px;
+}
+#instagramicon::after {
+  filter: hue-rotate(90deg);
+}
+
+#copyright {
+  color: grey;
+  font-size: 12px;
+  opacity: 50%;
+}
+
+/* tiny VERSION */
+@media (max-device-width: 219px) {
+  #startsection h2 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+}
+/* Deskptop VERSION */
+@media only screen and (min-width: 935px) {
+  /*nav*/
+  nav {
+    height: 80px;
+    display: flex;
+  }
+  #karmalogo {
+    display: inline;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    padding-left: 90px;
+  }
+  #menuhamburgericon {
+    display: none;
+  }
+  #navcontain {
+    width: 25%;
+  }
+  nav li {
+    display: inline;
+  }
+  nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 22px;
+  }
+  nav a:hover {
+    color: orange;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 40px;
+    padding-left: 10px;
+    padding-right: 70px;
+    width: 100%;
+  }
+  /*mainsection*/
+  #startsection {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 800px;
+  }
+  #startsection h2 {
+    font-size: 70px;
+    width: 70%;
+  }
+  #startsection p {
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  #learnmorebutton {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  /*second section*/
+  #secondsection {
+    display: none;
+  }
+  #secondsectiondesk {
+    background-color: whitesmoke;
+    height: 740px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #secondsectiondesk h2 {
+    font-weight: 200;
+    font-size: 57px;
+    width: 100%;
+    margin-top: -40px;
+    margin-bottom: 60px;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+  }
+  #imgcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /*this spaces things vertically*/
+  }
+  #textcontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; /*this spaces things vertically*/
+  }
+  #devicesicon,
+  #coffeeicon,
+  #refuelicon {
+    width: 200px;
+  }
+  #secondsectiondesk div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #secondsectiondesk p {
+    font-weight: 400;
+    font-size: 38px;
+    text-align: center;
+    color: black;
+  }
+  footer {
+    height: 390px;
+  }
+  footer p {
+    font-size: 34px;
+  }
+  #socialicons {
+    justify-content: space-evenly;
+    width: 30%;
+  }
+  #twittericon,
+  #facebookicon,
+  #instagramicon {
+    width: 30px;
+  }
+  #copyright {
+    color: grey;
+    font-size: 30px;
+    opacity: 50%;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 934px) {
+  #navcontain {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+  }
+  #menuhamburgericon {
+    display: block;
+  }
+  #startsection {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 800px;
+  }
+}
